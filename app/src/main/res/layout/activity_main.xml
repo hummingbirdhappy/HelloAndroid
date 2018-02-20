@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.helloandroid.MainActivity">
+
+    <ImageView
+        android:id="@+id/beindemand"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_weight="2"
+        android:src="@drawable/beindemand"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:padding="24dp"
+            android:src="@drawable/udacity_logo2" />
+
+        <TextView
+            android:id="@+id/udacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/address1"
+            android:layout_toRightOf="@id/logo"
+            android:paddingBottom="8sp"
+            android:paddingTop="8sp"
+            android:text="@string/udacity"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/address2"
+            android:layout_toRightOf="@id/logo"
+            android:text="@string/address1"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/logo"
+            android:layout_marginBottom="4dp"
+            android:text="@string/address2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address2"
+            android:layout_toRightOf="@id/logo"
+            android:layout_marginBottom="4dp"
+            android:autoLink="phone"
+            android:text="@string/phone"
+            android:textSize="14sp"
+            android:textColorLink="@android:color/holo_blue_dark"/>
+
+        <TextView
+            android:id="@+id/website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:layout_toRightOf="@id/logo"
+            android:autoLink="web"
+            android:text="@string/website"
+            android:textSize="14sp"
+            android:textColorLink="@android:color/holo_blue_dark"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:paddingTop="65dp"
+            android:paddingLeft="16dp"
+            android:textSize="14sp"
+            android:text="@string/description"
+            />
+        <ImageView
+            android:id="@+id/learners"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:layout_weight="2"
+            android:src="@drawable/udacitylearners"/>
+    </LinearLayout>
+</LinearLayout>
